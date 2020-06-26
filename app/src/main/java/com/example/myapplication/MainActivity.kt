@@ -21,12 +21,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         secondactivity.setOnClickListener {
-
-            var msg : String = etusermsge.text.toString()
-            Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
-            var intent=Intent(this,SecondPage::class.java )
+            val msg : String = etusermsge.text.toString()
+            val intent=Intent(this,SecondPage::class.java )
+            intent.putExtra("crn_msg",msg)
             startActivity(intent)
+        }
 
+        anotherapp.setOnClickListener {
+            val message : String = etusermsge.text.toString()
+            val intent=Intent()
+            intent.action=Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,message)
+            intent.type="tect/plain"
+
+            startActivity(Intent.createChooser(intent,"share to"))
 
         }
     }
