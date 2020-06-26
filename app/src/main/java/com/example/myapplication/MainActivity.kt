@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         btnshowmsg.setOnClickListener {
                 Log.i("MainActivity","button is clicked");
                 Toast.makeText(this,"button i clicked",Toast.LENGTH_SHORT).show();
+
+
         }
 
         secondactivity.setOnClickListener {
