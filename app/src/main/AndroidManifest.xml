@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondPage"></activity>
+        <activity android:name=".RecyclerA"></activity>
     </application>
 
 </manifest>

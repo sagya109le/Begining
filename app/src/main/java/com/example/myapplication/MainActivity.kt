@@ -37,5 +37,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(intent,"share to"))
 
         }
+
+        recyclerbtn.setOnClickListener {
+            val intent=Intent(this,RecyclerA::class.java)
+            startActivity(intent)
+        }
     }
 }
